@@ -1,11 +1,14 @@
+---
+title: Python Sever Code
+---
 from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('{{ site.baseurl }}/')
 def index():
   return render_template('template.html')
 
-@app.route('/my-link/')
+@app.route('{{ site.baseurl }}/my-link/')
 def my_link():
   print 'I got clicked!'
 
