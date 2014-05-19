@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('{{ site.baseurl }}/')
 def index():
-  return render_template('template.html')
+  return render_template('index.html')
 
 @app.route('{{ site.baseurl }}/my-link/')
 def my_link():
